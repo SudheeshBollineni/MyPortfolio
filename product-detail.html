@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Deep dive into product architecture, impact, and technical details">
+    <title>Product Detail | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section style="padding: var(--spacing-xl) 0; text-align: center;">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h1>AI Analytics Platform</h1>
+                <p style="font-size: 1.5rem; margin-top: var(--spacing-md); color: var(--accent-primary); font-weight: 600;">
+                    Enterprise-grade analytics powered by machine learning, processing millions of data points in real-time
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2>Problem Statement</h2>
+                <p style="font-size: 1.125rem; line-height: 1.8; margin-top: var(--spacing-md);">
+                    Enterprises struggle to extract actionable insights from massive volumes of data. Traditional analytics tools are slow, expensive, and fail to scale. Teams spend weeks building reports that become outdated the moment they're created. There's a critical need for a platform that can process real-time data streams, apply machine learning at scale, and deliver insights that drive business decisions.
+                </p>
+                <p style="font-size: 1.125rem; line-height: 1.8; margin-top: var(--spacing-md);">
+                    The challenge: build a system that handles 100M+ events daily, provides sub-second query responses, scales automatically, and delivers insights through an intuitive interface that non-technical users can navigate effortlessly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Overview -->
+    <section>
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2>Solution Overview</h2>
+                <p style="font-size: 1.125rem; line-height: 1.8; margin-top: var(--spacing-md);">
+                    I designed and built a distributed analytics platform that combines real-time data processing, machine learning pipelines, and a beautiful web interface. The system ingests data from multiple sources, processes it through ML models for pattern detection and anomaly identification, and presents insights through interactive dashboards.
+                </p>
+                <p style="font-size: 1.125rem; line-height: 1.8; margin-top: var(--spacing-md);">
+                    The platform uses a microservices architecture with event-driven communication, ensuring high availability and horizontal scalability. Machine learning models run in real-time, continuously learning from new data and improving accuracy. The frontend is built for performance, with lazy loading, intelligent caching, and responsive design that works seamlessly across devices.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Overview -->
+    <section style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Architecture Overview</h2>
+                
+                <div class="grid grid-3" style="margin-top: var(--spacing-md);">
+                    <div class="card">
+                        <h3 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm);">Frontend</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                React with TypeScript for type safety
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                Redux for state management
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                D3.js for data visualization
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                WebSocket for real-time updates
+                            </li>
+                            <li style="padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                Responsive design with CSS Grid
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm);">Backend</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                Microservices architecture
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                FastAPI for high-performance APIs
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                PostgreSQL for structured data
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                Redis for caching & sessions
+                            </li>
+                            <li style="padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                Kafka for event streaming
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--accent-primary); margin-bottom: var(--spacing-sm);">AI Layer</h3>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                TensorFlow for ML models
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                Real-time inference pipeline
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                Automated model retraining
+                            </li>
+                            <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                A/B testing framework
+                            </li>
+                            <li style="padding-left: var(--spacing-md); position: relative;">
+                                <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                                Feature store for ML ops
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section>
+        <div class="container">
+            <div style="max-width: 1000px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">Tech Stack</h2>
+                <div class="grid grid-2" style="gap: var(--spacing-lg);">
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-md); color: var(--accent-primary);">Core Technologies</h3>
+                        <div class="badge-group">
+                            <span class="badge badge-accent">Python 3.10+</span>
+                            <span class="badge badge-accent">React 18</span>
+                            <span class="badge badge-accent">TypeScript</span>
+                            <span class="badge badge-accent">FastAPI</span>
+                            <span class="badge badge-accent">PostgreSQL</span>
+                            <span class="badge badge-accent">Redis</span>
+                            <span class="badge badge-accent">TensorFlow</span>
+                            <span class="badge badge-accent">Kafka</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: var(--spacing-md); color: var(--accent-primary);">Infrastructure</h3>
+                        <div class="badge-group">
+                            <span class="badge badge-accent">Docker</span>
+                            <span class="badge badge-accent">Kubernetes</span>
+                            <span class="badge badge-accent">AWS (EC2, S3, RDS)</span>
+                            <span class="badge badge-accent">Terraform</span>
+                            <span class="badge badge-accent">GitHub Actions</span>
+                            <span class="badge badge-accent">Prometheus</span>
+                            <span class="badge badge-accent">Grafana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots / UI Highlights -->
+    <section style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2 style="text-align: center; margin-bottom: var(--spacing-lg);">UI Highlights</h2>
+                <div class="grid grid-2" style="gap: var(--spacing-md);">
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-card) 100%); height: 300px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-color);">
+                            <div style="color: var(--text-muted); font-size: 4rem;">📊</div>
+                        </div>
+                        <div style="padding: var(--spacing-md);">
+                            <h3>Real-Time Dashboard</h3>
+                            <p style="font-size: 0.95rem; margin-top: var(--spacing-xs);">Interactive charts and visualizations updating in real-time with WebSocket connections.</p>
+                        </div>
+                    </div>
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <div style="background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-card) 100%); height: 300px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--border-color);">
+                            <div style="color: var(--text-muted); font-size: 4rem;">🔍</div>
+                        </div>
+                        <div style="padding: var(--spacing-md);">
+                            <h3>Advanced Analytics</h3>
+                            <p style="font-size: 0.95rem; margin-top: var(--spacing-xs);">Powerful query builder with natural language processing for complex data exploration.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Your Role -->
+    <section>
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2>My Role</h2>
+                <p style="font-size: 1.125rem; line-height: 1.8; margin-top: var(--spacing-md);">
+                    I was the lead engineer on this project, responsible for architecture design, core development, and team coordination. I designed the microservices architecture, built the ML inference pipeline, developed the frontend dashboard, and established CI/CD processes.
+                </p>
+                <div style="margin-top: var(--spacing-md);">
+                    <h3 style="margin-bottom: var(--spacing-sm); color: var(--accent-primary);">Key Contributions:</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                            Architected scalable microservices system handling 50M+ daily requests
+                        </li>
+                        <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                            Built ML pipeline reducing processing time by 70% through optimization
+                        </li>
+                        <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                            Designed and implemented real-time dashboard used by 5K+ enterprise customers
+                        </li>
+                        <li style="margin-bottom: var(--spacing-xs); padding-left: var(--spacing-md); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                            Reduced infrastructure costs by 40% through intelligent caching and optimization
+                        </li>
+                        <li style="padding-left: var(--spacing-md); position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-primary);">▸</span>
+                            Established monitoring and alerting systems achieving 99.99% uptime
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background-color: var(--bg-secondary); text-align: center;">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2>Interested in Learning More?</h2>
+                <p style="font-size: 1.125rem; margin-top: var(--spacing-md); margin-bottom: var(--spacing-lg);">
+                    Let's discuss how I can help build your next product.
+                </p>
+                <div class="btn-group" style="justify-content: center;">
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="products.html" class="btn btn-secondary">View All Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2024 Portfolio. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="GitHub">GH</a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">LI</a>
+                <a href="#" class="social-icon" aria-label="Twitter">TW</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

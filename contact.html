@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch to discuss your next project">
+    <title>Contact | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section style="padding: var(--spacing-xl) 0; text-align: center;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h1>Let's Build Something Great</h1>
+                <p style="font-size: 1.25rem; margin-top: var(--spacing-md); color: var(--text-secondary);">
+                    Have a project in mind? Let's discuss how we can bring it to life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section>
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <form style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; padding: var(--spacing-lg);">
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <label for="name" style="display: block; margin-bottom: var(--spacing-xs); color: var(--text-primary); font-weight: 500;">Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            style="width: 100%; padding: 0.875rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary); font-size: 1rem; font-family: var(--font-body); transition: border-color var(--transition-fast);"
+                            onfocus="this.style.borderColor='var(--accent-primary)'"
+                            onblur="this.style.borderColor='var(--border-color)'"
+                        >
+                    </div>
+
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <label for="email" style="display: block; margin-bottom: var(--spacing-xs); color: var(--text-primary); font-weight: 500;">Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            style="width: 100%; padding: 0.875rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary); font-size: 1rem; font-family: var(--font-body); transition: border-color var(--transition-fast);"
+                            onfocus="this.style.borderColor='var(--accent-primary)'"
+                            onblur="this.style.borderColor='var(--border-color)'"
+                        >
+                    </div>
+
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <label for="subject" style="display: block; margin-bottom: var(--spacing-xs); color: var(--text-primary); font-weight: 500;">Subject</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            required
+                            style="width: 100%; padding: 0.875rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary); font-size: 1rem; font-family: var(--font-body); transition: border-color var(--transition-fast);"
+                            onfocus="this.style.borderColor='var(--accent-primary)'"
+                            onblur="this.style.borderColor='var(--border-color)'"
+                        >
+                    </div>
+
+                    <div style="margin-bottom: var(--spacing-md);">
+                        <label for="message" style="display: block; margin-bottom: var(--spacing-xs); color: var(--text-primary); font-weight: 500;">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="6" 
+                            required
+                            style="width: 100%; padding: 0.875rem; background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 6px; color: var(--text-primary); font-size: 1rem; font-family: var(--font-body); resize: vertical; transition: border-color var(--transition-fast);"
+                            onfocus="this.style.borderColor='var(--accent-primary)'"
+                            onblur="this.style.borderColor='var(--border-color)'"
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="margin-bottom: var(--spacing-lg);">Other Ways to Reach Me</h2>
+                <div class="grid grid-3" style="gap: var(--spacing-md);">
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">📧</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-xs);">Email</h3>
+                        <a href="mailto:contact@portfolio.com" style="color: var(--accent-primary);">contact@portfolio.com</a>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">💼</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-xs);">LinkedIn</h3>
+                        <a href="#" style="color: var(--accent-primary);">linkedin.com/in/profile</a>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">💻</div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: var(--spacing-xs);">GitHub</h3>
+                        <a href="#" style="color: var(--accent-primary);">github.com/username</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="text-align: center;">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h2>Ready to Start Your Project?</h2>
+                <p style="font-size: 1.125rem; margin-top: var(--spacing-md); margin-bottom: var(--spacing-lg); color: var(--text-secondary);">
+                    Whether you're building an MVP or scaling an existing product, I'm here to help.
+                </p>
+                <div class="btn-group" style="justify-content: center;">
+                    <a href="products.html" class="btn btn-secondary">View My Work</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2024 Portfolio. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" class="social-icon" aria-label="GitHub">GH</a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">LI</a>
+                <a href="#" class="social-icon" aria-label="Twitter">TW</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
