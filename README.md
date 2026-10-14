@@ -1,7 +1,17 @@
 # Sudheesh Bollineni portfolio
 
-Text-first portfolio for .NET full stack development and applied AI work.
+A text-first, multi-page portfolio for .NET full stack and applied AI work.
 
-The site is a standalone `index.html` and can be hosted directly with GitHub Pages. It describes professional work at a high level without publishing client code, screenshots, or internal architecture diagrams. TravelMind is identified as a personal project that is not currently in production.
+## Pages
 
-Content and contact details were updated in October 2026.
+- `index.html` — overview and selected work
+- `about.html` — career story and recognition
+- `experience.html` — one employer and its assignments
+- `products.html` — project directory
+- `product-detail.html` — public project summaries
+- `contact.html` — contact links
+- `css/site.css` — shared responsive styling
+
+The site is static and works with GitHub Pages. Professional project descriptions avoid client code, screenshots, detailed architecture, and unsupported impact metrics. TravelMind is labeled as a personal project that is not in production.
+
+Updated October 2026.
