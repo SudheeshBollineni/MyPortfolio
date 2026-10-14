@@ -1,165 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Product builder specializing in AI-powered systems, automation, and scalable architecture">
-    <title>Home | Portfolio</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages/home.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sudheesh Bollineni is a .NET full stack developer working across enterprise integrations, product engineering, and applied AI.">
+  <meta name="theme-color" content="#f7f8fa">
+  <title>Sudheesh Bollineni | .NET Full Stack Developer</title>
+  <style>
+    :root { color-scheme: light; --ink:#162232; --muted:#526174; --line:#dce3e9; --paper:#fff; --background:#f7f8fa; --accent:#125b88; --accent-soft:#e8f2f8; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--background); color:var(--ink); font-family:Inter, Aptos, "Segoe UI", Arial, sans-serif; font-size:16px; line-height:1.65; }
+    a { color:var(--accent); text-underline-offset:3px; }
+    a:hover { color:#0c4366; }
+    a:focus-visible { outline:3px solid #83c5e9; outline-offset:4px; border-radius:2px; }
+    .wrap { width:min(1080px, calc(100% - 48px)); margin:auto; }
+    .skip { position:absolute; left:-9999px; top:8px; z-index:10; padding:8px 12px; background:#fff; }
+    .skip:focus { left:10px; }
+    header { background:#fff; border-bottom:1px solid var(--line); }
+    .top { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { color:var(--ink); font-size:16px; font-weight:750; text-decoration:none; letter-spacing:-.02em; }
+    nav { display:flex; flex-wrap:wrap; gap:8px 24px; }
+    nav a { color:var(--muted); text-decoration:none; font-size:14px; font-weight:650; }
+    nav a:hover { color:var(--accent); }
+    main { padding-bottom:64px; }
+    .hero { padding:78px 0 64px; border-bottom:1px solid var(--line); }
+    .eyebrow { margin:0 0 16px; color:var(--accent); font-size:13px; font-weight:750; text-transform:uppercase; letter-spacing:.12em; }
+    h1 { margin:0; max-width:900px; font-size:clamp(38px, 5.2vw, 66px); line-height:1.09; letter-spacing:-.055em; font-weight:760; }
+    .hero p.lead { max-width:740px; margin:25px 0 30px; color:var(--muted); font-size:clamp(18px, 2vw, 21px); line-height:1.55; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; }
+    .button { display:inline-block; padding:11px 18px; border:1px solid var(--accent); border-radius:7px; font-size:14px; font-weight:700; text-decoration:none; }
+    .button.primary { color:#fff; background:var(--accent); }
+    .button.secondary { color:var(--accent); background:#fff; }
+    section { padding:60px 0 0; scroll-margin-top:20px; }
+    .section-head { display:grid; grid-template-columns:220px 1fr; gap:30px; align-items:start; margin-bottom:26px; }
+    .section-head h2 { margin:0; font-size:27px; line-height:1.2; letter-spacing:-.035em; }
+    .section-head p { max-width:700px; margin:0; color:var(--muted); }
+    .panel { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:30px; }
+    .intro { font-size:18px; line-height:1.7; }
+    .intro p { max-width:860px; margin:0; }
+    .work { display:grid; gap:14px; }
+    .work article { display:grid; grid-template-columns:220px 1fr; gap:30px; }
+    .period { color:var(--muted); font-size:14px; }
+    h3 { margin:0 0 7px; font-size:20px; letter-spacing:-.025em; line-height:1.3; }
+    .kicker { margin:0 0 14px; color:var(--accent); font-size:14px; font-weight:700; }
+    p { margin:0 0 14px; }
+    p:last-child { margin-bottom:0; }
+    .cards { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; }
+    .cards article { min-height:215px; }
+    .meta { margin:0 0 14px; color:var(--accent); font-size:13px; font-weight:700; letter-spacing:.015em; }
+    .note { color:var(--muted); font-size:14px; }
+    .skills { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:20px 30px; }
+    .skills h3 { font-size:15px; margin-bottom:5px; }
+    .skills p { color:var(--muted); font-size:15px; }
+    .awards { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; }
+    .awards strong { display:block; font-size:17px; }
+    .awards span { color:var(--muted); font-size:14px; }
+    .contact { background:#eaf1f5; border:1px solid #d5e3ed; border-radius:10px; padding:30px; }
+    .contact p { max-width:640px; }
+    .contact-links { display:flex; flex-wrap:wrap; gap:12px 25px; margin-top:16px; font-weight:650; }
+    footer { padding:28px 0; border-top:1px solid var(--line); color:var(--muted); font-size:13px; }
+    @media (max-width:760px) {
+      .wrap { width:min(100% - 32px, 650px); }
+      .top { padding:17px 0; align-items:flex-start; flex-direction:column; gap:12px; }
+      nav { gap:6px 18px; }
+      .hero { padding:55px 0 47px; }
+      section { padding-top:45px; }
+      .section-head, .work article { display:block; }
+      .section-head h2, .period { margin-bottom:9px; }
+      .cards, .skills, .awards { grid-template-columns:1fr; }
+      .panel, .contact { padding:22px; }
+    }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">Portfolio</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap top">
+      <a class="brand" href="#top">Sudheesh Bollineni</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap">
+      <div class="hero" id="top">
+        <p class="eyebrow">.NET full stack developer · Applied AI</p>
+        <h1>Building useful software across enterprise systems and AI applications.</h1>
+        <p class="lead">I'm Sudheesh Bollineni, a software developer at Snovasys with 3+ years of experience in .NET, Angular, product engineering, and enterprise integrations. I also design applied AI workflows for internal tools and personal products.</p>
+        <div class="actions"><a class="button primary" href="#projects">Explore my work</a><a class="button secondary" href="#contact">Get in touch</a></div>
+      </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>I design and build scalable AI-powered products.</h1>
-            <p class="hero-subtitle">Transforming complex problems into elegant, production-ready solutions</p>
-            <div class="hero-cta">
-                <a href="products.html" class="btn btn-primary">View Products</a>
-                <a href="contact.html" class="btn btn-secondary">Contact Me</a>
-            </div>
-        </div>
-    </section>
+      <section id="about" aria-labelledby="about-title">
+        <div class="section-head"><h2 id="about-title">About</h2><p>My work spans customer-facing production software, independent internal products, and practical AI systems.</p></div>
+        <div class="panel intro"><p>I joined Snovasys in May 2023 after completing a B.Tech in Computer Science and Engineering. I started on the TimeChamp product, moved to the AICPA &amp; CIMA client assignment in January 2025, and contributed to internal product initiatives alongside that work. I enjoy taking responsibility for a problem from requirements and design through implementation and support.</p></div>
+      </section>
 
-    <!-- Who I Am -->
-    <section class="who-i-am">
-        <div class="container">
-            <h2>Who I Am</h2>
-            <p>I'm a product builder who combines engineering depth with design sensibility. I create AI-powered systems that solve real problems, scale to millions of users, and deliver measurable impact. Every product I build is a statement of what's possible when technical excellence meets user obsession.</p>
+      <section id="experience" aria-labelledby="experience-title">
+        <div class="section-head"><h2 id="experience-title">Experience</h2><p>One employer, with product, client, and internal AI assignments.</p></div>
+        <div class="work">
+          <article class="panel"><div class="period">May 2023–Present<br>Snovasys Software Solutions</div><div><h3>Software Developer</h3><p class="kicker">AICPA &amp; CIMA client assignment · January 2025–Present</p><p>Develop features and resolve issues in a customer-facing production platform connected to Salesforce, Zuora, commercetools, and Okta. Work with an AWS-hosted environment and Sentry for issue investigation. Collaborate with stakeholders to turn business requirements into maintainable changes.</p><p>Independently architected and developed Mercury, a .NET and Angular application that uses enterprise integrations to help investigate and resolve recurring issues without maintaining its own database.</p></div></article>
+          <article class="panel"><div class="period">Internal initiative<br>2025–2026</div><div><h3>BIXO project assistant</h3><p class="kicker">AI architecture and product planning</p><p>Defined the product plan and AI architecture for an internal assistant that coordinates employee check-ins and progress updates, then prepares reports for line managers. Directed the design of RAG and LangChain/LangGraph workflows, model API use, guardrails, and capacity controls including queues, rate limits, and circuit breakers. The project was developed with .NET and Python.</p></div></article>
+          <article class="panel"><div class="period">Product division<br>2023–2024</div><div><h3>TimeChamp</h3><p class="kicker">Full stack product development</p><p>Rebuilt the TimeChamp marketing site with page performance and search visibility in mind, and used Google Ads and Analytics to inform marketing and sales discussions. Later contributed to leave management and TaskTimer features, security and scalability work, and a six-month onboarding support lead assignment.</p></div></article>
         </div>
-    </section>
+      </section>
 
-    <!-- Featured Products -->
-    <section class="featured-products">
-        <div class="container">
-            <div class="section-header">
-                <h2>Featured Products</h2>
-                <p>Real products, real impact, real results</p>
-            </div>
-            <div class="grid grid-3">
-                <a href="product-detail.html" class="product-card">
-                    <div class="product-card-header">
-                        <h3 class="product-card-title">AI Analytics Platform</h3>
-                        <p class="product-card-description">Enterprise-grade analytics powered by machine learning, processing millions of data points in real-time.</p>
-                    </div>
-                    <div class="badge-group">
-                        <span class="badge badge-accent">Python</span>
-                        <span class="badge badge-accent">TensorFlow</span>
-                        <span class="badge badge-accent">React</span>
-                    </div>
-                    <div class="product-card-footer">
-                        <span class="btn btn-secondary" style="width: 100%; text-align: center;">View Product →</span>
-                    </div>
-                </a>
-                
-                <a href="product-detail.html" class="product-card">
-                    <div class="product-card-header">
-                        <h3 class="product-card-title">Automation Suite</h3>
-                        <p class="product-card-description">Intelligent workflow automation that reduces manual work by 80% while maintaining 99.9% accuracy.</p>
-                    </div>
-                    <div class="badge-group">
-                        <span class="badge badge-accent">Node.js</span>
-                        <span class="badge badge-accent">PostgreSQL</span>
-                        <span class="badge badge-accent">Docker</span>
-                    </div>
-                    <div class="product-card-footer">
-                        <span class="btn btn-secondary" style="width: 100%; text-align: center;">View Product →</span>
-                    </div>
-                </a>
-                
-                <a href="product-detail.html" class="product-card">
-                    <div class="product-card-header">
-                        <h3 class="product-card-title">Scalable API Gateway</h3>
-                        <p class="product-card-description">High-performance API infrastructure handling 10M+ requests daily with sub-50ms latency.</p>
-                    </div>
-                    <div class="badge-group">
-                        <span class="badge badge-accent">Go</span>
-                        <span class="badge badge-accent">Kubernetes</span>
-                        <span class="badge badge-accent">Redis</span>
-                    </div>
-                    <div class="product-card-footer">
-                        <span class="btn btn-secondary" style="width: 100%; text-align: center;">View Product →</span>
-                    </div>
-                </a>
-            </div>
-            <div style="text-align: center; margin-top: var(--spacing-lg);">
-                <a href="products.html" class="btn btn-secondary">View All Products</a>
-            </div>
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="section-head"><h2 id="projects-title">Selected projects</h2><p>A closer look at the work I owned directly, and a personal application built outside my employer.</p></div>
+        <div class="cards">
+          <article class="panel"><p class="meta">Client platform · .NET · Angular</p><h3>Mercury</h3><p>Architected and built this issue resolution application independently for the AICPA &amp; CIMA engagement. It brings information from Salesforce, Zuora, commercetools, and Okta into workflows for recurring issue investigation without a separate database.</p></article>
+          <article class="panel"><p class="meta">Internal AI initiative · .NET · Python</p><h3>BIXO</h3><p>Planned the product and led AI architecture decisions for a project assistant that conducts check-ins and compiles manager updates. The design uses retrieval, agent workflows, model APIs, guardrails, and request controls.</p></article>
+          <article class="panel"><p class="meta">Independent internal product · Angular · .NET · SQL Server</p><h3>KnowledgeHub</h3><p>Built an internal knowledge assistant that helps employees find information from organizational documents and procedures. Integrated AI calls through Nova, an internal shared API layer.</p></article>
+          <article class="panel"><p class="meta">Personal project · Angular · .NET · PostgreSQL</p><h3>TravelMind</h3><p>Built an AI-enabled bus booking application with seat locking, payments, wallets, role-based administration, an agent portal, analytics, and a mobile app. Added a booking and support assistant with LangGraph and knowledge-base retrieval. The project is complete as a personal build and is not currently in production.</p><p class="note">Additional integrations include RabbitMQ, Redis, Razorpay, Google Maps and sign-in APIs, Sentry, PostHog, and Google Analytics.</p></article>
         </div>
-    </section>
+      </section>
 
-    <!-- Core Strengths -->
-    <section class="core-strengths">
-        <div class="container">
-            <div class="section-header">
-                <h2>Core Strengths</h2>
-            </div>
-            <div class="strength-grid">
-                <div class="strength-item">
-                    <div class="strength-icon">🤖</div>
-                    <h3 class="strength-title">AI Systems</h3>
-                    <p class="strength-description">Building intelligent systems that learn, adapt, and deliver value at scale</p>
-                </div>
-                <div class="strength-item">
-                    <div class="strength-icon">⚡</div>
-                    <h3 class="strength-title">Automation</h3>
-                    <p class="strength-description">Eliminating manual work through smart, reliable automation pipelines</p>
-                </div>
-                <div class="strength-item">
-                    <div class="strength-icon">🏗️</div>
-                    <h3 class="strength-title">Scalable Architecture</h3>
-                    <p class="strength-description">Designing systems that grow from startup to enterprise seamlessly</p>
-                </div>
-                <div class="strength-item">
-                    <div class="strength-icon">🎨</div>
-                    <h3 class="strength-title">UI-Focused Engineering</h3>
-                    <p class="strength-description">Code that's not just functional, but beautiful and intuitive</p>
-                </div>
-            </div>
+      <section id="skills" aria-labelledby="skills-title">
+        <div class="section-head"><h2 id="skills-title">Technical focus</h2><p>Technologies used across professional work and selected personal projects.</p></div>
+        <div class="panel skills">
+          <div><h3>Application development</h3><p>C#, .NET, ASP.NET Core Web API, Angular, TypeScript, JavaScript, REST APIs</p></div>
+          <div><h3>Data and messaging</h3><p>SQL Server, PostgreSQL, Redis, RabbitMQ</p></div>
+          <div><h3>Applied AI</h3><p>RAG, LangChain, LangGraph, prompts, model APIs, guardrails</p></div>
+          <div><h3>Integrations and operations</h3><p>Salesforce, Zuora, commercetools, Okta, AWS, Sentry, Git</p></div>
         </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p class="footer-text">&copy; 2024 Portfolio. All rights reserved.</p>
-            <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="experience.html">Experience</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="social-icons">
-                <a href="#" class="social-icon" aria-label="GitHub">GH</a>
-                <a href="#" class="social-icon" aria-label="LinkedIn">LI</a>
-                <a href="#" class="social-icon" aria-label="Twitter">TW</a>
-            </div>
-        </div>
-    </footer>
+      <section id="recognition" aria-labelledby="recognition-title">
+        <div class="section-head"><h2 id="recognition-title">Recognition</h2><p>Awards for work on BIXO and Mercury in 2025.</p></div>
+        <div class="awards"><div class="panel"><strong>Excellence Award · 2025</strong><span>Snovasys · BIXO</span></div><div class="panel"><strong>Automation Engineer · 2025</strong><span>AICPA &amp; CIMA · Mercury</span></div></div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <div class="section-head"><h2 id="contact-title">Contact</h2><p>Open to conversations about .NET full stack development and applied AI engineering.</p></div>
+        <div class="contact"><p>Reach me by email or connect on LinkedIn. You can also explore this portfolio's source on GitHub.</p><div class="contact-links"><a href="mailto:sudheeshbollineni34@gmail.com">Email</a><a href="https://www.linkedin.com/in/sudheesh-bollineni-a47b39232/" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/SudheeshBollineni/MyPortfolio" rel="noopener noreferrer">GitHub</a></div></div>
+      </section>
+    </div>
+  </main>
+  <footer><div class="wrap">© 2026 Sudheesh Bollineni</div></footer>
 </body>
 </html>
-
